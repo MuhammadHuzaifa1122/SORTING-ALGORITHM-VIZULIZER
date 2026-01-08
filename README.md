@@ -1,4 +1,5 @@
 "# SORTING-ALGORITHM-VIZULIZER" 
+
 A console-based Sorting Algorithm Visualizer built in C++ that demonstrates how popular sorting algorithms work internally through step-by-step visualization, performance comparison, and time complexity analysis.
 
 This project was developed as a group project to strengthen our understanding of Data Structures & Algorithms, C++ programming, and algorithm performance analysis.
