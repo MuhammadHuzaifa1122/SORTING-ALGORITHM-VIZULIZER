@@ -7,6 +7,14 @@
 using namespace std;
 
 void printHeader();
+void loader();
+void gotoxy(int x, int y)
+{
+    COORD coord;
+    coord.X = x;
+    coord.Y = y;
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+}
 
 int RED = 4;
 int GREEN = 10;
@@ -46,6 +54,8 @@ void showTimeComplexities();
 int main()
 {
     double timeTakenInSelectionSort, timeTakenInBubbleSort, timeTakenInMergeSort, timeTakenInQuickSort;
+    system("cls");
+    loader();
     system("cls");
     printHeader();
     srand(time(0));
@@ -1054,3 +1064,52 @@ void printHeader()
     setConsoleColor(7);
     setConsoleColor(WHITE);
 }
+
+void loader(){
+    SetConsoleOutputCP(CP_UTF8);
+    int x = 10;
+    int y = 5;
+    setConsoleColor(6);
+    gotoxy(x, y);
+    cout << "███████╗ ██████╗ ██████╗ ████████╗██╗███╗   ██╗ ██████╗                  " << endl;
+    gotoxy(x, y + 1);
+    cout << "██╔════╝██╔═══██╗██╔══██╗╚══██╔══╝██║████╗  ██║██╔════╝                  " << endl;
+    gotoxy(x, y + 2);
+    cout << "███████╗██║   ██║██████╔╝   ██║   ██║██╔██╗ ██║██║  ███╗                 " << endl;
+    gotoxy(x, y + 3);
+    cout << "╚════██║██║   ██║██╔══██╗   ██║   ██║██║╚██╗██║██║   ██║                 " << endl;
+    gotoxy(x, y + 4);
+    cout << "███████║╚██████╔╝██║  ██║   ██║   ██║██║ ╚████║╚██████╔╝                 " << endl;
+    gotoxy(x, y + 5);
+    cout << "╚══════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝╚═╝  ╚═══╝ ╚═════╝                  " << endl;
+    gotoxy(x, y + 7);
+    cout << " █████╗ ██╗      ██████╗  ██████╗ ██████╗ ██╗████████╗██╗  ██╗███╗   ███╗" << endl;
+    gotoxy(x, y + 8);
+    cout << "██╔══██╗██║     ██╔════╝ ██╔═══██╗██╔══██╗██║╚══██╔══╝██║  ██║████╗ ████║" << endl;
+    gotoxy(x, y + 9);
+    cout << "███████║██║     ██║  ███╗██║   ██║██████╔╝██║   ██║   ███████║██╔████╔██║" << endl;
+    gotoxy(x, y + 10);
+    cout << "██╔══██║██║     ██║   ██║██║   ██║██╔══██╗██║   ██║   ██╔══██║██║╚██╔╝██║" << endl;
+    gotoxy(x, y + 11);
+    cout << "██║  ██║███████╗╚██████╔╝╚██████╔╝██║  ██║██║   ██║   ██║  ██║██║ ╚═╝ ██║" << endl;
+    gotoxy(x, y + 12);
+    cout << "╚═╝  ╚═╝╚══════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝     ╚═╝" << endl;
+    gotoxy(x, y + 14);
+    cout << "██╗   ██╗██╗███████╗██╗   ██╗ █████╗ ██╗     ██╗███████╗███████╗██████╗  " << endl;
+    gotoxy(x, y + 15);
+    cout << "██║   ██║██║██╔════╝██║   ██║██╔══██╗██║     ██║╚══███╔╝██╔════╝██╔══██╗ " << endl;
+    gotoxy(x, y + 16);
+    cout << "██║   ██║██║███████╗██║   ██║███████║██║     ██║  ███╔╝ █████╗  ██████╔╝ " << endl;
+    gotoxy(x, y + 17);
+    cout << "╚██╗ ██╔╝██║╚════██║██║   ██║██╔══██║██║     ██║ ███╔╝  ██╔══╝  ██╔══██╗ " << endl;
+    gotoxy(x, y + 18);
+    cout << " ╚████╔╝ ██║███████║╚██████╔╝██║  ██║███████╗██║███████╗███████╗██║  ██║ " << endl;
+    gotoxy(x, y + 19);
+    cout << "  ╚═══╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝╚══════╝╚══════╝╚═╝  ╚═╝" << endl;
+    gotoxy(x, y + 21);
+    setConsoleColor(7);
+    cout << "Press any key to continue..." << endl;
+    gotoxy(x, y + 22);
+    getch();
+}
+
